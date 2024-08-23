@@ -41,8 +41,16 @@ Hay un directorio wordpress. Vemos lo que tiene:
 
 ![image](https://github.com/user-attachments/assets/fc0ef621-48b0-4c4c-b0d3-65ebcfad41d1)
 
-Parece una web hecha con Wordpress. Le lanzamos WPScan para saber plugins vulnerables, temas vulnerables y enumerar usuarios:
+Parece una web hecha con Wordpress. Le lanzamos WPScan para saber plugins vulnerables, temas vulnerables y enumerar usuarios y conseguimos sacar un usuario:
 
+    [+] elyana
+     | Found By: Author Posts - Author Pattern (Passive Detection)
+     | Confirmed By:
+     |  Rss Generator (Passive Detection)
+     |  Wp Json Api (Aggressive Detection)
+     |   - http://10.10.29.33/wordpress/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+     |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+     |  Login Error Messages (Aggressive Detection)
 
 ### Vulnerability assesment
 
