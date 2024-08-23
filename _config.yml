@@ -1,6 +1,6 @@
 remote_theme: CaptainIRS/hacker-plus-theme
 
-title: 0xjul1Ch44nS3c portfolio
+title: 0xjul1Ch44nS3c
 author: 0xjul1Ch44nS3c 
 description: Blog portfolio of 0xjul1Ch44nS3c
 disqus_forum_shortname:
@@ -9,7 +9,7 @@ google_analytics: # Your Google Analytics Tracking ID
 
 # Usernames and badges
 htb_badge_no: UK0uvt9ubGR0nUSrwUWN2an7Sq3yTj071bJ4ycBszDaOM4uEPG4gMQApBuGf # Go to the HackTheBox site and copy your ID
-thm_badge_no:  <script src="https://tryhackme.com/badge/1237589"></script> # Go to https://tryhackme.com/profile -> Public Profile -> Get Badge ID
+thm_badge_no:  1237589 # Go to https://tryhackme.com/profile -> Public Profile -> Get Badge ID
 show_thm_htb_badges_in_nav: false
 github_username: 
 gitlab:
