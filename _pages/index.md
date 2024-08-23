@@ -6,7 +6,7 @@ layout: default
   <h1>Julián Espada Rodríguez</h1>
   <h3>Red Teamer & Pentester</h3>
   <h3>Spain</h3>
+  <script src="https://www.hackthebox.eu/badge/114171"></script>
   <script src="https://tryhackme.com/badge/1237589"></script>
-  <script src="https://www.hackthebox.eu/badge/303582"></script>
 </div>
 <p></p>
