@@ -23,10 +23,6 @@ Seguimos con la enumeración y comenzamos con el puerto 80:
 
 Parece la típica página por defecto de servidores Apache. Enumeramos los directorios del servidor web:
 
-    ===============================================================
-    Gobuster v3.6
-    by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
-    ===============================================================
     [+] Url:                     http://10.10.33.133/
     [+] Method:                  GET
     [+] Threads:                 10
@@ -39,12 +35,7 @@ Parece la típica página por defecto de servidores Apache. Enumeramos los direc
     ===============================================================
     /wordpress            (Status: 301) [Size: 316] [--> http://10.10.33.133/wordpress/]
     /hackathons           (Status: 200) [Size: 197]
-    Progress: 21231 / 220561 (9.63%)^C
-    [!] Keyboard interrupt detected, terminating.
-    Progress: 21251 / 220561 (9.63%)
-    ===============================================================
-    Finished
-    ===============================================================
+    
 
 Hay un directorio wordpress. Vemos lo que tiene:
 
