@@ -40,3 +40,7 @@ comments: false
     |_  Supported Methods: HEAD GET POST OPTIONS
     |_http-server-header: Apache/2.4.29 (Ubuntu)
     Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+# Vulnerability assesment
+
+# Privilege escalation
