@@ -9,10 +9,18 @@ date: 2024-08-23
 comments: false
 ---
 
-# Enumeration and Scanning
+### Enumeration and Scanning
+
+Primero de todos hacemos un escaneo de los puertos y sus servicios
 
 ![image](https://github.com/user-attachments/assets/197fa6d1-b90b-40b4-9b3c-af2cd5b40bbc)
 
-# Vulnerability assesment
+# Puerto 80 (HTTP Server)
 
-# Privilege escalation
+Seguimos con la enumeración y comenzamos con el puerto 80:
+
+
+
+### Vulnerability assesment
+
+### Privilege escalation
