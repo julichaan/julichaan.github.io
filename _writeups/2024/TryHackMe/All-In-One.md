@@ -46,6 +46,12 @@ Parece la típica página por defecto de servidores Apache. Enumeramos los direc
     Finished
     ===============================================================
 
+Hay un directorio wordpress. Vemos lo que tiene:
+
+![image](https://github.com/user-attachments/assets/fc0ef621-48b0-4c4c-b0d3-65ebcfad41d1)
+
+Parece una web hecha con Wordpress. Le lanzamos WPScan para saber plugins vulnerables, temas vulnerables y enumerar usuarios:
+
 
 ### Vulnerability assesment
 
