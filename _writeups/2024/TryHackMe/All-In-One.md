@@ -10,12 +10,7 @@ comments: false
 ---
 
 # Enumeration and Scanning
-    # Nmap 7.95 scan initiated Fri Aug 23 21:22:13 2024 as: nmap -vvv -p 21,22,80 -sV -sC -T4 -vvv -oN nmap 10.10.33.133
-    Nmap scan report for 10.10.33.133
-    Host is up, received syn-ack (0.045s latency).
-    Scanned at 2024-08-23 21:22:13 CEST for 12s
-
-    PORT   STATE SERVICE REASON  VERSION
+        PORT   STATE SERVICE REASON  VERSION
     21/tcp open  ftp     syn-ack vsftpd 3.0.3
     | ftp-syst: 
     |   STAT: 
@@ -45,7 +40,3 @@ comments: false
     |_  Supported Methods: HEAD GET POST OPTIONS
     |_http-server-header: Apache/2.4.29 (Ubuntu)
     Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
-
-    Read data files from: /opt/homebrew/bin/../share/nmap
-    Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-    # Nmap done at Fri Aug 23 21:22:25 2024 -- 1 IP address (1 host up) scanned in 12.60 seconds
