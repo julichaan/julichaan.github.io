@@ -9,13 +9,13 @@ date: 2024-08-23
 comments: false
 ---
 
-### Enumeration and Scanning
+# Enumeration and Scanning
 
 Primero de todos hacemos un escaneo de los puertos y sus servicios
 
 ![image](https://github.com/user-attachments/assets/197fa6d1-b90b-40b4-9b3c-af2cd5b40bbc)
 
-# Puerto 80 (HTTP Server)
+### Puerto 80 (HTTP Server)
 
 Seguimos con la enumeración y comenzamos con el puerto 80:
 
@@ -66,9 +66,9 @@ Probamos bruteforce al login de wordpress y no obtuvimos nada. Volvemos a lanzar
      | [!] Title: Mail Masta <= 1.0 - Unauthenticated Local File Inclusion (LFI)
      | [!] Title: Mail Masta 1.0 - Multiple SQL Injection
 
-### Vulnerability assesment
+# Vulnerability assesment
 
-# CVE-2016-10956
+### CVE-2016-10956
 
 
-### Privilege escalation
+# Privilege escalation
