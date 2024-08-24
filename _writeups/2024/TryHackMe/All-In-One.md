@@ -52,6 +52,23 @@ Parece una web hecha con Wordpress. Le lanzamos WPScan para saber plugins vulner
      |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
      |  Login Error Messages (Aggressive Detection)
 
+Probamos bruteforce al login de wordpress y no obtuvimos nada. Volvemos a lanzar WPScan para ver si encontramos alguna vulnerabilidad de los plugins, y encontramos que de Mail Masta 1.0 encontramos 2 vulnerabilidades interesantes:
+
+    [+] mail-masta
+     | Location: http://10.10.168.165/wordpress/wp-content/plugins/mail-masta/
+     | Latest Version: 1.0 (up to date)
+     | Last Updated: 2014-09-19T07:52:00.000Z
+     |
+     | Found By: Urls In Homepage (Passive Detection)
+     |
+     | [!] 2 vulnerabilities identified:
+     |
+     | [!] Title: Mail Masta <= 1.0 - Unauthenticated Local File Inclusion (LFI)
+     | [!] Title: Mail Masta 1.0 - Multiple SQL Injection
+
 ### Vulnerability assesment
+
+# CVE-2016-10956
+
 
 ### Privilege escalation
