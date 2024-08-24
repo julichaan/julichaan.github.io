@@ -1,7 +1,7 @@
 ---
 layout: writeup
 category: TryHackMe
-chall_description: https://tryhackme.com/r/room/allinonemj
+chall_description: This box's intention is to help you practice several ways in exploiting a system. There is few intended paths to exploit it and few unintended paths to get root. Try to discover and exploit them all. Do not just exploit it using intended paths, hack like a pro and enjoy the box !
 points: 160
 solves: 2
 tags: tryhackme ejptv2
