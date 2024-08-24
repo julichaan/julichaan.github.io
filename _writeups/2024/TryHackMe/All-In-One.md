@@ -70,5 +70,7 @@ Probamos bruteforce al login de wordpress y no obtuvimos nada. Volvemos a lanzar
 
 ### CVE-2016-10956
 
+*The File Inclusion vulnerability allows an attacker to include a file, usually exploiting a "dynamic file inclusion" mechanisms implemented in the target application. The vulnerability occurs due to the use of user-supplied input without proper validation*
+
 
 # Privilege escalation
